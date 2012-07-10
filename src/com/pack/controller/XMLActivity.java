@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import bb.star.parser.ParserHandler;
 
+import com.pack.model.XmlID;
+import com.pack.model.XmlUrl;
 import com.pack.networkConnection.Connect;
 
 public class XMLActivity extends Activity {
@@ -19,8 +21,9 @@ public class XMLActivity extends Activity {
         setContentView(R.layout.main);
         
         try {
-        	inputStream = Connect.INSTANCE.getXmlFromUrl("http://usafootball.com/taxonomy/term/4/all/feed");
-			ParserHandler.INSTANCE.parseMainResponse(inputStream);
+        	String xml_url = XmlUrl.getXmlUrl(XmlID.mainpage_xml);
+        	inputStream = Connect.INSTANCE.getXmlFromUrl(xml_url);
+			ParserHandler.INSTANCE.parseXMLResponse(inputStream);
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

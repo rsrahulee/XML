@@ -16,7 +16,6 @@ public class Connect {
 
 	public InputStream getXmlFromUrl(String url) {
 		try {
-
 			URL url1 = new URL(url);
 			HttpURLConnection connection = (HttpURLConnection) url1.openConnection();
 			connection.setRequestMethod("GET");
