@@ -4,11 +4,11 @@ import java.io.InputStream;
 
 import android.app.Activity;
 import android.os.Bundle;
-import bb.star.parser.ParserHandler;
 
 import com.pack.model.XmlID;
 import com.pack.model.XmlUrl;
 import com.pack.networkConnection.Connect;
+import com.pack.parser.ParserHandler;
 
 public class XMLActivity extends Activity {
 	
